@@ -30,10 +30,6 @@ export default class AuthPage extends Component {
             password: this.state.signInPassword
         });
 
-        console.log('=============================\n')
-        console.log('|| user.body', user.body)
-        console.log('\n=============================')
-
         this.props.handleToken(user.body.token);
         this.props.history.push('/');
     }
@@ -46,30 +42,30 @@ export default class AuthPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="auth">
                 <form onSubmit={this.handleSignIn}>
                     Sign In?
                     <label>
-                        Email
+                        Email:
                         <input onChange={e => this.setState({ signInEmail: e.target.value })} value={this.state.signInEmail}/>
                     </label>
                     <label>
-                        Password
+                        Password:
                         <input type="password" onChange={e => this.setState({ signInPassword: e.target.value })} value={this.state.signInPassword}/>
                     </label>
-                    <button>Submit</button>
+                    <button className="authButton">Submit</button>
                 </form>
                 <form onSubmit={this.handleSignUp}>
                     Sign Up?
                     <label>
-                        Email
+                        Email:
                         <input onChange={e => this.setState({ signupEmail: e.target.value })} value={this.state.signupEmail}/>
                     </label>
                     <label>
-                        Password
+                        Password:
                         <input type="password" onChange={e => this.setState({ signupPassword: e.target.value })} value={this.state.signupPassword}/>
                     </label>
-                    <button>Submit</button>
+                    <button className="authButton">Submit</button>
                 </form>
             </div>
         )

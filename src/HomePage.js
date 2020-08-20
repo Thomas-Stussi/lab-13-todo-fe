@@ -13,7 +13,8 @@ export default class HomePage extends Component {
     render() {
         return (
             <div>
-                Hey It's Me, HomePage
+                <h1>Keep Track of Your Tasks!</h1>
+                <img src="https://media1.tenor.com/images/355bf3e54d78af6b2cb4113b65f57bf7/tenor.gif?itemid=11565140" alt="Cookie Monster Staying Busy" />
             </div>
         )
     }
