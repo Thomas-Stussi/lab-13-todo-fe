@@ -31,7 +31,7 @@ export default class AuthPage extends Component {
         });
 
         this.props.handleToken(user.body.token);
-        this.props.history.push('/');
+        this.props.history.push('/home');
     }
 
     componentDidCatch(err, errinfo) {
