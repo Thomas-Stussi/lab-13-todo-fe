@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +11,95 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-shadow: 2px 2px darkslateblue;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  width: 100%;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: darkslateblue solid 3px;
+  border-radius: 20px;
+}
+
+.todo {
+  background-color: rgb(81, 134, 233);
+  box-shadow: 5px 5px black;
+  border-radius: 10px;
+  max-width: 90vh;
+  margin: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: rgb(29, 29, 131);
+}
+
+button {
+  background-color: darkslategray;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+  margin: 5px;
+}
+
+.delete {
+  background-color: maroon;
+  margin-bottom: 5px;
+}
+
+a {
+  margin: 5px;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vh;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.authButton {
+  max-width: 100px;
+}
+
+form {
+  background-color:  rgb(29, 29, 131);
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar {
+    padding-top: 0;
+    border-bottom: darkslateblue solid 3px;
+    border-left: darkslateblue solid 3px;
+    justify-content: space-between;
+  }
+  a {
+    margin: 1px;
+  }
+}
+
+@media (min-width: 800px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
